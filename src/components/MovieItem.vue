@@ -1,11 +1,17 @@
 <script>
 export default {
     name: 'MovieItem',
-  
+    data(){
+        return{
+
+           score:  Math.ceil(this.movie.vote_average / 2),
+        }
+    },
+
     props: {
         movie: Object
     }
-    
+      
 }
 </script>
 
@@ -18,7 +24,10 @@ export default {
         <li>
             <img :src="`https://flagcdn.com/16x12/${movie.original_language}.png`" :alt="`${movie.original_language}`">
         </li>
-        <li>{{ movie.vote_average }}</li>
+        <li>
+            <i  v-for="vote in score" class="fa-solid fa-star"></i>
+            <i v-for="vote in (5 - score)" class="fa-regular fa-star"></i>
+        </li>
     </ul>
 </template>
 
