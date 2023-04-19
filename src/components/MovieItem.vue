@@ -3,8 +3,7 @@ export default {
     name: 'MovieItem',
   
     props: {
-        movie: Object,
-   
+        movie: Object
     }
     
 }
@@ -12,6 +11,7 @@ export default {
 
 
 <template>
+    <img :src="`https://image.tmdb.org/t/p/w342/${movie.poster_path}`" alt="">
     <ul>
         <li>{{ movie.title || movie.name}} </li>
         <li> {{ movie.original_title || movie.original_name}}</li>
