@@ -13,10 +13,10 @@ import SearchBox from "../components/SearchBox.vue";
             }
         }, 
         methods:{
-            searchMovies(){
+            searchFromApi(urlApi){
                 console.log(this.store.searchText);
 
-                const url = this.store.API_URL + `&query=${this.store.searchText}`
+                const url = urlApi + `&query=${this.store.searchText}`
                 console.log(url);   
                 this.store.fetchMovie(url)
             }
@@ -26,7 +26,7 @@ import SearchBox from "../components/SearchBox.vue";
 
 
 <template>
-    <SearchBox @makeSearch = 'searchMovies()'/>
+    <SearchBox @makeSearch = "searchFromApi(this.store.API_URL_Movies), searchFromApi(this.store.API_URL_Series)"/>
 </template>
 
 

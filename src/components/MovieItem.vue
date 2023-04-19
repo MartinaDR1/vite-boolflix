@@ -3,7 +3,8 @@ export default {
     name: 'MovieItem',
   
     props: {
-        movie: Object
+        movie: Object,
+   
     }
     
 }
@@ -12,8 +13,8 @@ export default {
 
 <template>
     <ul>
-        <li>{{ movie.title }}</li>
-        <li> {{ movie.original_title }}</li>
+        <li>{{ movie.title || movie.name}} </li>
+        <li> {{ movie.original_title || movie.original_name}}</li>
         <li>
             <img :src="`https://flagcdn.com/16x12/${movie.original_language}.png`" :alt="`${movie.original_language}`">
         </li>
