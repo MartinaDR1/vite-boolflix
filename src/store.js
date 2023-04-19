@@ -1,0 +1,23 @@
+import axios from 'axios'
+import { reactive } from 'vue'
+//import axios from 'axios'
+
+export const store = reactive({
+    searchText : '',
+    loading: true,
+    movies: null,
+    API_URL: 'https://api.themoviedb.org/3/search/movie?api_key=dd47fc13a6b6880337e73dd1422c279c&language=en-US&page=1&include_adult=false',
+
+    fetchMovie(url){
+        axios
+        .get(url)
+        .then (response => {
+            this.loading= false,
+            this.movies = response.data.results
+        })
+        .catch(error => {
+            console.log(error);
+            console.error(error.message)
+        })
+    }
+})
