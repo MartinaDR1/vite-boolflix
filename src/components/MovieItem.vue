@@ -1,26 +1,25 @@
 <script>
-    export default {
-        name: 'MovieItem',
-        
-        props:{
-            movie: Object
-        }
+export default {
+    name: 'MovieItem',
+  
+    props: {
+        movie: Object
     }
+    
+}
 </script>
 
 
 <template>
-   
     <ul>
         <li>{{ movie.title }}</li>
         <li> {{ movie.original_title }}</li>
-        <li> {{ movie.original_language}}</li>
+        <li>
+            <img :src="`https://flagcdn.com/16x12/${movie.original_language}.png`" :alt="`${movie.original_language}`">
+        </li>
         <li>{{ movie.vote_average }}</li>
     </ul>
-
 </template>
 
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
