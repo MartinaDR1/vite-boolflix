@@ -7,8 +7,7 @@ export default {
         }
     },
     props: {
-        movie: Object,
-        pop: Object
+        movie: Object
     }
 
 }
