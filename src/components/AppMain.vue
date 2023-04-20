@@ -12,7 +12,6 @@ import MoviesList from "../components/MoviesList.vue";
 
 
 <template>
-
     <MoviesList/>
 </template>
 
