@@ -1,7 +1,16 @@
 <script>
+import { store } from "./store";
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
   export default {
+    data(){
+      return{
+        store
+      }
+    },
+    mounted(){
+      store.fetchMovie(store.API_base)
+    },
     components:{
       AppHeader,
       AppMain

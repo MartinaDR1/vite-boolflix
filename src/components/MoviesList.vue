@@ -12,7 +12,7 @@ import MovieItem from "../components/MovieItem.vue";
             return {
                 store
             }
-        }      
+        }
     }
 </script>
 
@@ -20,7 +20,6 @@ import MovieItem from "../components/MovieItem.vue";
 <template>
     <div class="container">
         <div class="row row-cols-sm-2 row-cols-md-4 ">
-
             <MovieItem :movie="movie" v-for="movie in store.movies "/>
         </div>
     </div>
