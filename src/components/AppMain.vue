@@ -12,10 +12,11 @@ import MoviesList from "../components/MoviesList.vue";
 
 
 <template>
-    <MoviesList/>
+    <main class="bg-black">
+        <MoviesList/>
+    </main>
 </template>
 
 
 <style lang="scss" scoped>
-
 </style>

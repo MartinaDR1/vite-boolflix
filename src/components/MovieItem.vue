@@ -19,7 +19,7 @@ export default {
 <template>
     <div class="col">
         <div class="card">
-            <img :src="`https://image.tmdb.org/t/p/w342${movie.poster_path}`" alt="">
+            <img class="poster" :src="`https://image.tmdb.org/t/p/w342${movie.poster_path}`" alt="">
 
             <ul class="collapse">
                 <li>
@@ -51,11 +51,11 @@ export default {
 <style lang="scss" scoped>
     .card{
         margin: 1.5rem 0;
-        img{
+        .poster{
             max-height: 350px;
         }
     }
-    .card:hover img{
+    .card:hover .poster{
         visibility: collapse;
     }
 
