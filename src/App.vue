@@ -8,9 +8,6 @@ import AppMain from "./components/AppMain.vue";
         store
       }
     },
-    mounted(){
-      store.fetchMovie(store.API_base)
-    },
     components:{
       AppHeader,
       AppMain
@@ -19,9 +16,9 @@ import AppMain from "./components/AppMain.vue";
 </script>
 
 
-<template>
+<template >
   <AppHeader/>
-  <AppMain/>
+  <AppMain />
 </template>
 
 

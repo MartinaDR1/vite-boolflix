@@ -15,6 +15,7 @@ export default {
 
 
 <template>
+
     <div class="col">
         <div class="card">
             <img class="poster" :src="`https://image.tmdb.org/t/p/w342${movie.poster_path}`" alt="">
@@ -49,35 +50,36 @@ export default {
 
 
 <style lang="scss" scoped>
-.card {
-    margin: 1.5rem 0;
-    border: 1px solid white;
-    overflow-y: auto;
+    .card {
+        margin: 1.5rem 0;
+        border: 1px solid white;
+        overflow-y: auto;
 
 
-    .poster {
-        max-height: 350px;
+        .poster {
+            max-height: 350px;
+        }
     }
-}
 
-::-webkit-scrollbar {
-    display: none;
-}
+    ::-webkit-scrollbar {
+        display: none;
+    }
 
-.card:hover .poster {
-    visibility: collapse;
-}
+    .card:hover .poster {
+        visibility: collapse;
+    }
 
-.card:hover {
-    background-color: black;
-}
+    .card:hover {
+        background-color: black;
+    }
 
-.card:hover ul {
-    list-style: none;
-    font-size: small;
-    display: block;
-    color: white;
-    position: absolute;
-    top: 1rem;
-    left: -1rem;
-}</style>
+    .card:hover ul {
+        list-style: none;
+        font-size: small;
+        display: block;
+        color: white;
+        position: absolute;
+        top: 1rem;
+        left: -1rem;
+    }
+</style>
